@@ -19,10 +19,8 @@ function addTask(taskText = '', isCompleted = false) {
         return;
     }
 
-    // Create task element
     const li = document.createElement('li');
 
-    // Create checkbox
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = isCompleted;
@@ -31,25 +29,19 @@ function addTask(taskText = '', isCompleted = false) {
         saveData();
     });
 
-    // Create task text span
     const span = document.createElement('span');
     span.textContent = taskValue;
     if (isCompleted) {
         span.classList.add('completed');
     }
 
-    // Create delete button
     const deleteBtn = createDeleteButton(li);
 
-    // Append elements to the task item
     li.appendChild(checkbox);
     li.appendChild(span);
     li.appendChild(deleteBtn);
 
-    // Add the task to the list
     taskList.appendChild(li);
-
-    // Clear the input field
     taskInput.value = '';
 
     saveData();
@@ -84,5 +76,4 @@ function showTask() {
     tasks.forEach(task => addTask(task.text, task.completed));
 }
 
-// Load tasks from local storage when the page loads
 showTask();
