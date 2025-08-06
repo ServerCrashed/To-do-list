@@ -4,4 +4,4 @@
 - Check to strikthrough completed tasks
 - Persistent data storage across sessions
   
-![Demo image](https://github.com/ServerCrashed/To-do-list/blob/master/demo.png)
+![Demo image](https://github.com/ServerCrashed/To-do-list/blob/master/assets/demo.png)
